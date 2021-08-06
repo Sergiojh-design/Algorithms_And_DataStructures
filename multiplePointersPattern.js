@@ -1,4 +1,6 @@
 /*
+Multiple Pointer Pattern - sumZero
+
 Write a function called sumZero which accepts a sorted array
 of intefers. The function should find the first pair where
 the sum is 0. Return an array that includes both values that
