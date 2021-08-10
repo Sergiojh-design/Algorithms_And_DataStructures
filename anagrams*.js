@@ -1,4 +1,10 @@
 /*
+Frequency Counters
+  This pattern uses objects or sets to collect values/freqencies of values.
+  This can often aviod the need for nested loops O(N^2) operations with array/strings.
+*/
+
+/*
 Freqency Counter - validAnagram
 
 Given two strings, write a function to determine if the second string is an anagram of the
