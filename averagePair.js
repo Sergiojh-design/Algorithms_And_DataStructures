@@ -15,6 +15,7 @@ Examples:
   averagePair([], 4) // false
 */
 
+//My Solution
 function averagePair(array, num) {
   if(array.length < 2) {
       return false;
@@ -39,6 +40,19 @@ function averagePair(array, num) {
           sum = array[i] + array[j];
           avg = sum/(2);
       }
+  }
+  return false;
+}
+
+//Udemy Solution
+function averagePair(arr, num){
+  let start = 0
+  let end = arr.length-1;
+  while(start < end){
+    let avg = (arr[start]+arr[end]) / 2
+    if(avg === num) return true;
+    else if(avg < num) start++
+    else end--
   }
   return false;
 }
