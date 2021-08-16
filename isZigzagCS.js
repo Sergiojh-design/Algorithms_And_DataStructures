@@ -1,3 +1,4 @@
+//Codesignal practice test Q1
 function isZigzag(numbers) {
   if(numbers.length <= 1){
       return 0;
