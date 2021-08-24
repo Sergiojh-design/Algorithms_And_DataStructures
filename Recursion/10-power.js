@@ -9,6 +9,7 @@ power(2, 2) //4
 power(2, 4) //16
 */
 
+//MySolution
 function power(base, exp){
   if(exp === 0){
     return 1;
@@ -18,4 +19,10 @@ function power(base, exp){
     return base;
   }
   return base * power(base, exp - 1);
+}
+
+//Udemy solution
+function power(base, exponent){
+  if(exponent === 0) return 1;
+  return base * power(base,exponent-1);
 }

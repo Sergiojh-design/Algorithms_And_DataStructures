@@ -7,6 +7,7 @@ Write a recursive function called fb which accepts a number and returns the nth 
 // fib(28) // 317811
 // fib(35) // 9227465
 
+//My Solution
 function fib(num){
   let array = [1, 1];
   if(num === 1 || num === 2) {
@@ -18,7 +19,6 @@ function fib(num){
       if(array.length === num){
           return;
       }
-
       array.push(array[count-1]+array[count-2]);
       count++
       helper(count,array, num);
@@ -26,4 +26,10 @@ function fib(num){
 
 helper(count, array, num);
 return array[num-1];
+}
+
+//Udemy solution
+function fib(n){
+  if (n <= 2) return 1;
+  return fib(n-1) + fib(n-2);
 }

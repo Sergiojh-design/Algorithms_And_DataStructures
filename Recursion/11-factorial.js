@@ -7,6 +7,7 @@ Write a function factorial which accepts a number and retuns the factorial of th
 // factorial(4) // 24
 // factorial(7) // 5040
 
+//My Solution
 function factorial(){
   if(num === 0) {
     return 1;
@@ -16,4 +17,11 @@ function factorial(){
       return 1;
   }
 return num * factorial(num - 1);
+}
+
+//Udemy solution
+function factorial(x){
+  if (x < 0 ) return 0;
+  if (x <= 1 ) return 1;
+  return x * factorial(x-1);
 }
