@@ -21,7 +21,7 @@ function fib(num){
       }
       array.push(array[count-1]+array[count-2]);
       count++
-      helper(count,array, num);
+      helper(count, array, num);
   }
 
 helper(count, array, num);
