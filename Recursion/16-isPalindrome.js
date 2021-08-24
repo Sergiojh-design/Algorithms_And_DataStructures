@@ -8,6 +8,7 @@ Write a recursive function called isPalindrome which returns true if the string 
 // isPalindrome('amanaplanacanalpanama') // true
 // isPalindrome('amanaplanacanalpandemonium') // false
 
+//My Solution
 function isPalindrome(str){
   if(str.length <= 1) return true;
 
