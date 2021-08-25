@@ -10,3 +10,9 @@ function reverse(string){
   if(string.length === 1) return string;
   return reverse(string.slice(1)) + string[0];
 }
+
+//Udemy Solution
+function reverse(str){
+	if(str.length <= 1) return str;
+	return reverse(str.slice(1)) + str[0];
+}

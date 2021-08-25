@@ -8,6 +8,7 @@ Write a recursive function called flatten which accepts an array of arrays and r
 // flatten([[1],[2],[3]]) // [1,2,3]
 // flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]]) // [1,2,3]
 
+//My Solution
 function flatten(array){
   let flatArray = [];
   let helper = array => {
@@ -19,4 +20,17 @@ function flatten(array){
   }
   helper(array);
 return flatArray;
+}
+
+//Udemy Solution
+function flatten(oldArr){
+  var newArr = []
+  	for(var i = 0; i < oldArr.length; i++){
+    	if(Array.isArray(oldArr[i])){
+      		newArr = newArr.concat(flatten(oldArr[i]))
+    	} else {
+      		newArr.push(oldArr[i])
+    	}
+  }
+  return newArr;
 }
