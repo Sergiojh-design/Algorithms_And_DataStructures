@@ -4,6 +4,7 @@ Write a recursive function called capitalizeFirst. Given an array of strings, ca
 
 // capitalizeFirst(['car','taco','banana']); // ['Car','Taco','Banana']
 
+//My Solution
 function capitalizeFirst (array) {
   // add whatever parameters you deem necessary - good luck!
   let newArray = [];
@@ -18,4 +19,15 @@ function capitalizeFirst (array) {
   }
   helper(array);
   return newArray;
+}
+
+//Udemy Solution
+function capitalizeWords (array) {
+  if (array.length === 1) {
+    return [array[0].toUpperCase()];
+  }
+  let res = capitalizeWords(array.slice(0, -1));
+  res.push(array.slice(array.length-1)[0].toUpperCase());
+  return res;
+
 }
