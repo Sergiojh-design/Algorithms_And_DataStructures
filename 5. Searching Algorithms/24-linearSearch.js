@@ -19,9 +19,7 @@ linearSearch([100], 200) // -1
 //My Solution
 function linearSearch(array, num) {
   for(let i = 0; i<array.length; i++){
-      if(array[i] === num){
-          return i;
-      }
+      if(array[i] === num) return i;
   }
   return -1;
 }
