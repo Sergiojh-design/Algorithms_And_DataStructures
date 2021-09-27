@@ -1,6 +1,9 @@
 /*
 BubbleSort
 - A sorting algorithm where the largest values bubble up to the top!
+
+Time Complexity: O(n^2)
+Time Complexity: O(n) -> if we know that data is very nearly sorted.
 */
 
 //Non opimized, continue sorting even when there are no sorts to be made.
