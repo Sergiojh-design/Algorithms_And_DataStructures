@@ -29,3 +29,12 @@ function insertionSort(arr){
     }
     return arr;
 }
+
+/*
+Comparing Bubble, Selection and Insertion Sort
+
+Algo              Time Comp(Best)   Time Comp(Avg)  Time Comp(Worst)  Space Comp
+Bubble Sort         O(n)              O(n^2)           O(n^2)           O(1)
+Insertion Sort      O(n)              O(n^2)           O(n^2)           O(1)
+Selection Sort      O(n^2)            O(n^2)           O(n^2)           O(1)
+*/
