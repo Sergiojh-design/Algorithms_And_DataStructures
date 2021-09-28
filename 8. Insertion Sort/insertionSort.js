@@ -32,6 +32,7 @@ function insertionSort(arr){
 
 /*
 Comparing Bubble, Selection and Insertion Sort
+(These excel when the dataset is small)
 
 Algo              Time Comp(Best)   Time Comp(Avg)  Time Comp(Worst)  Space Comp
 Bubble Sort         O(n)              O(n^2)           O(n^2)           O(1)
