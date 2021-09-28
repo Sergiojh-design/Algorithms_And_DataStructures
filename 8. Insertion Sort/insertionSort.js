@@ -11,7 +11,6 @@ function insertionSort(arr){
       if(currentVal < arr[j]){
         arr[j+1] = arr[j]
         arr[j] = currentVal;
-        console.log(arr);
       }
     }
   }
