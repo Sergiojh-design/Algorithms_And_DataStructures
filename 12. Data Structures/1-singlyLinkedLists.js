@@ -33,6 +33,7 @@ class SinglyLinkedList{
       this.length = 0;
   }
 
+  //Push: add a new node to the end of the Linked List.
   push(val){
       var newNode = new Node(val);
       if(this.head === null){
@@ -46,7 +47,7 @@ class SinglyLinkedList{
       this.length++
       return this;
   }
-
+  //Pop: remove node from the end of the Linked List.
   pop() {
       if(this.head === null){
           return undefined;
@@ -68,7 +69,31 @@ class SinglyLinkedList{
           return current;
       }
   }
+  //Shifting: removing a new node from the beginning of the Linked List.
+  shift() {
+    if(!this.head) return undefined;
+        let oldHead = this.head;
+        this.head = this.head.next;
+        this.length--;
+         if(this.length === 0){
+            this.head = null;
+        }
+        return oldHead;
+  }
+  //Unshifting: adding a new node to the beginning of the Linked List.
+  unshift(val) {
+    var newNode = new Node(val);
+    if(!this.head){
+        this.head = newNode
+        this.tail = this.head;
 
+    } else {
+       newNode.next = this.head;
+       this.head = newNode;
+    }
+    this.length++;
+    return this;
+  }
 }
 
 var list = new SinglyLinkedList()
@@ -76,7 +101,4 @@ list.push('HELLO');
 list.push('WORLD');
 list.push('ME');
 list.push('!');
-list.pop();
-list.pop();
-list.pop();
-list.pop();
+list.shift();
