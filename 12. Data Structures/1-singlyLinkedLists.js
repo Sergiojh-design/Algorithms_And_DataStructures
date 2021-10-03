@@ -135,6 +135,21 @@ class SinglyLinkedList{
         return true;
     }
   }
+  //Remove: removing a node from the Linked List at a specific position.
+  remove(index){
+    if(index < 0 || index > this.length) return undefined;
+    if (index === this.length - 1) return this.pop();
+    if (index === 0) return this.shift();
+    // let nodeBefore = this.get(index - 1);
+    // let nodeAfterNext = this.get(index + 1);
+    // let removedNode = nodeBefore.next;
+    // nodeBefore.next = nodeAfterNext;
+    var previousNode = this.get(index - 1);
+    var remove = previousNode.next;
+    previousNode.next = remove.next;
+    this.length--;
+    return remove;
+  }
 
 }
 
