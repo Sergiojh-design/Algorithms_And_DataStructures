@@ -94,6 +94,26 @@ class SinglyLinkedList{
     this.length++;
     return this;
   }
+  //Get: retrieving a node by it's position in the Linked List.
+  get(index){
+    if(index < 0 || index >= this.length) return null;
+    let count = 0;
+    let current = this.head;
+    while (count !== index){
+        count++;
+        current = current.next;
+    }
+    return current;
+  }
+  //Set: changing the value of a node based on it's position in the Linked List.
+  set(index, value){
+    let current = this.get(index);
+    if(current){
+        current.val = value;
+        return true;
+    }
+    return false;
+  }
 }
 
 var list = new SinglyLinkedList()
