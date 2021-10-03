@@ -114,6 +114,28 @@ class SinglyLinkedList{
     }
     return false;
   }
+  //Insert: add a node to the Linked List at a specific position
+  insert(index, value){
+    if(index < 0 || index > this.length){
+        return false;
+    } else if (index === this.length){
+        this.push(value);
+        return true;
+    } else if (index === 0){
+      //another way of returning true
+       return  !!this.unshift(value);
+    } else {
+        let newNode = new Node(value);
+        let nodeBefore = this.get(index-1);
+        let nodeAfter = nodeBefore.next;
+        // let nodeAfter = this.get(index);
+        nodeBefore.next = newNode;
+        newNode.next = nodeAfter;
+        this.length++;
+        return true;
+    }
+  }
+
 }
 
 var list = new SinglyLinkedList()
