@@ -19,6 +19,19 @@ Comparisons with Array
    - Can quickly be accessed at a specific index
 */
 
+/*
+Big O of Singly Linked Lists
+ - Insertion: O(1)
+ - Removal: It depends... Beginning - O(1)| End - O(N)
+ - Searching: O(N)
+ - Access: O(N)
+
+ Recap:
+ - Singly Linked Lists are an excellent alternative to arrays when insertion and deletion at the beginning are frequently required
+ - Arrays contain a built in index whereas Linked Lists do not
+ - The idea of a list data structures that consist of nodes is the foundation for other data structures like Stacks and Queues
+*/
+
 class Node{
   constructor(val){
       this.val = val;
@@ -150,7 +163,23 @@ class SinglyLinkedList{
     this.length--;
     return remove;
   }
-
+  //Reverse: reversing the Linked List in place.
+  reverse(){
+    let i = 0;
+    var node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    let next;
+    let prev = null;
+    while(i < this.length){
+        next = node.next;
+        node.next = prev;
+        prev = node;
+        node = next;
+        i++;
+    }
+    return this;
+  }
 }
 
 var list = new SinglyLinkedList()
